@@ -15,7 +15,7 @@ caption_position = usercaption_position.lower()
 caption_text = Config.CAPTION_TEXT
 
 
-@Bot.on_message(
+@autocaption.on_message(
     filters.channel 
     & (filters.document | filters.video | filters.audio) 
     & ~filters.create(lambda _, __, msg: msg.edit_date is not None),  # Check for edited messages
